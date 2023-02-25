@@ -1,0 +1,9 @@
+[package]
+name = "polars_examples"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.19", features = [ "rt-multi-thread" ] }
+polars = { version = "0.27.2", features = [ "polars-io", "parquet", "lazy", "dtype-full" ] }
+polars-sql = { version = "0.2" }

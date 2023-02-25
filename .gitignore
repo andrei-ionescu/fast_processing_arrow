@@ -1,0 +1,14 @@
+target/
+debug/
+
+*/target/
+*/debug/
+
+datafusion_examples/target/
+datafusion_examples/debug/
+polars_examples/target/
+polars_examples/debug/
+delta_read_examples/target/
+delta_read_examples/debug/
+
+Cargo.lock
