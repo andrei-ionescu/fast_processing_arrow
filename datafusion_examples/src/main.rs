@@ -8,15 +8,15 @@ use datafusion::{error::Result};
 #[tokio::main]
 async fn main() -> Result<()> {
     let ctx = SessionContext::new();
-    let filename1 = "../data/parquet/data-fact-anonymised_mot_test_item-2021-20220620T090029Z-anonymised_mot_test_item_2021.parquet";
-    let filename2 = "../data/parquet/data-dimension-vehicle-20220620T085710Z-vehicle.parquet";
+    let filename1 = "../data/parquet/data-fact-anonymised_mot_test_item-2021.parquet";
+    let filename2 = "../data/parquet/data-dimension-vehicle.parquet";
     let start = Instant::now();
 
     // query1(ctx, filename1).await.unwrap();
     // query1_sql(ctx, filename1).await.unwrap();
 
-    // query2(ctx, filename1).await.unwrap();
-    query2_sql(ctx, filename1).await.unwrap();
+    query2(ctx, filename1).await.unwrap();
+    // query2_sql(ctx, filename1).await.unwrap();
 
     // query3(ctx, filename1, filename2).await.unwrap();
     // query3_sql(ctx, filename1, filename2).await.unwrap();

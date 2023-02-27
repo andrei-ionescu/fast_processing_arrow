@@ -5,21 +5,20 @@ use std::time::Instant;
 use polars::prelude::*;
 use polars::lazy::dsl::*;
 use polars_sql::SQLContext;
-// use polars_sql::*;
 
 fn main() {
-    let filename1 = "../data/parquet/data-fact-anonymised_mot_test_item-2021-20220620T090029Z-anonymised_mot_test_item_2021.parquet";
-    let filename2 = "../data/parquet/data-dimension-vehicle-20220620T085710Z-vehicle.parquet";
+    let filename1 = "../data/parquet/data-fact-anonymised_mot_test_item-2021.parquet";
+    let filename2 = "../data/parquet/data-dimension-vehicle.parquet";
     let start = Instant::now();
 
     // query1(filename1);
     // query1_sql(filename1);
 
-    // query2(filename1);
+    query2(filename1);
     // query2_sql(filename1);
 
     // query3(filename1, filename2);
-    query3_sql(filename1, filename2);
+    // query3_sql(filename1, filename2);
 
     println!("Elapsed: {:?}ms", start.elapsed().as_millis());
 }
